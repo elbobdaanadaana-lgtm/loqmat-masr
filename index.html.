@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لقمة مصر | LOQMAT MASR</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f7f3;
+      color: #20251f;
+    }
+    header {
+      background: #173f32;
+      color: white;
+      padding: 24px 18px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; font-size: 30px; }
+    header p { margin: 0; color: #d8e7dc; }
+    main { padding: 20px 16px; max-width: 800px; margin: auto; }
+    .search {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    h2 { font-size: 22px; }
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 14px;
+      margin: 12px 0;
+      border: 1px solid #e8e5dc;
+    }
+    .card h3 { margin-top: 0; color: #173f32; }
+    .tag {
+      display: inline-block;
+      background: #e5eee7;
+      color: #173f32;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+    .note { color: #686d67; line-height: 1.8; }
+    footer { text-align: center; padding: 24px; color: #686d67; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍽️ لقمة مصر</h1>
+    <p>LOQMAT MASR — اكتشف طعم مصر</p>
+  </header>
+
+  <main>
+    <input
+      class="search"
+      id="search"
+      type="search"
+      placeholder="ابحث عن مطعم أو أكلة..."
+      aria-label="البحث عن مطعم"
+    >
+
+    <h2>اكتشف المطاعم</h2>
+    <p class="note">دليلك لاكتشاف المطاعم والكافيهات في مصر.</p>
+
+    <section id="restaurants">
+      <article class="card">
+        <h3>مطاعم مصر 🇪🇬</h3>
+        <span class="tag">مطاعم</span>
+        <p class="note">هنساعدك تكتشف أماكن الأكل المختلفة في مصر.</p>
+      </article>
+
+      <article class="card">
+        <h3>الكافيهات ☕</h3>
+        <span class="tag">كافيهات</span>
+        <p class="note">اكتشف الكافيهات المناسبة لخروجاتك.</p>
+      </article>
+
+      <article class="card">
+        <h3>أكلات الشارع 🌯</h3>
+        <span class="tag">أكل شعبي</span>
+        <p class="note">رحلتك لاكتشاف طعم الشارع المصري تبدأ هنا.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>لقمة مصر © 2026</footer>
+
+  <script>
+    document.getElementById("search").addEventListener("input", function () {
+      const query = this.value.trim().toLowerCase();
+      document.querySelectorAll(".card").forEach(function (card) {
+        card.style.display = card.textContent.toLowerCase().includes(query)
+          ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+  </html>
+  
